@@ -28,7 +28,8 @@ Flutter application 입니다.
 [NEXON 개발자 센터](https://developers.nexon.com/kart)
 
 ## (고급) API json 응답 상세 구조
-### api의 json들은 id가 사용되기 때문에, 적절히 name과 mapping하는 것이 중요하다.
+### metadata의 json들은 id가 사용되기 때문에, 적절히 name과 mapping하는 것이 중요하다.
+**[여기](https://github.com/mschadev/kartrider-open-api-docs)가 공식 문서보다 정리가 아주 잘 되어있다.**
 1. GET https://api.nexon.co.kr/kart/v1.0/users/{access_id} (유저 고유 식별자로 라이더명 조회)  
 Response Body 예시
 {
@@ -46,17 +47,17 @@ Response Body 예시
 3. GET https://api.nexon.co.kr/kart/v1.0/users/{access_id}/matches?start_date={start_date}&end_date={end_date}&offset={offset}&limit={limit}&match_types={match_types} (유저 고유 식별자로 매치 리스트 조회)  
 Response Body 예시
 {
-        ~~ 추후작성 ~~
+        ~~추후작성~~
 }
 4. GET https://api.nexon.co.kr/kart/v1.0/matches/all?start_date={start_date}&end_date={end_date}&offset={offset}&limit={limit}&match_types={match_types} (모든 매치 리스트 조회)  
 Response Body 예시
 {
-        ~~ 추후작성 ~~
+        ~~추후작성~~
 }
 5. GET https://api.nexon.co.kr/kart/v1.0/matches/{match_id} (특정 매치의 상세 정보 조회)  
 Response Body 예시
 {
-        ~~ 추후작성 ~~
+        ~~추후작성~~
 }
 6. GET https://static.api.nexon.co.kr/kart/latest/metadata.zip (메타 데이터 다운로드)  
 - metadata 폴더 구조

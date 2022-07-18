@@ -154,8 +154,6 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
 
   @override
   void initState() {
-    /// 인앱 결재 구현
-    AppTrackingTransparency.requestTrackingAuthorization();
     bannerAd = Ads.createBannerAd();
     // showAd = false;
     matchIds = <String>["", "", "", "", "", ""];
@@ -366,6 +364,14 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
             break;
         }
       }
+    }
+
+    if (await AppTrackingTransparency.trackingAuthorizationStatus ==
+        TrackingStatus.notDetermined) {
+      // Wait for dialog popping animation
+      await Future.delayed(const Duration(milliseconds: 200));
+      // Request system's tracking authorization dialog
+      await AppTrackingTransparency.requestTrackingAuthorization();
     }
   }
 
